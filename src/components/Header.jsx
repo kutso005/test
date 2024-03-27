@@ -92,10 +92,10 @@ export default function Header() {
           </div>
           <div>
           <div className="navlink_menu">
-            <NavLink onClick={handleScrollToP || setMenu(false)} className="NavLink">
+            <NavLink onClick={()=>handleScrollToP()||setMenu(false)} className="NavLink">
               <p>Заказать уборку</p>
             </NavLink>
-            <NavLink className="NavLink"  onClick={handleScrollToP || setMenu(false)}>
+            <NavLink className="NavLink"  onClick={()=>handleScrollToPrice()|| setMenu(false)}>
               <p>Услуги</p>
             </NavLink>
             <NavLink className="NavLink">
