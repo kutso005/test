@@ -1,13 +1,260 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family:OpenSans ;
+
+  background-position: right top;
+}
+#about{
+  background-image:url("././image/Clip.png") ;
+  background-repeat: repeat;
+  height:100vh;
+}
+@font-face {
+  font-family:OpenSans ;
+  src: url("../src/fonts/OpenSans-Light.ttf");
+  font-weight: 300;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: OpenSans;
+  src: url("../src/fonts/OpenSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("../src/fonts/OpenSans-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("../src/fonts/OpenSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("../src/fonts/OpenSans-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("../src/fonts/OpenSans-ExtraBold.ttf");
+  font-weight: 800;
+}
+
+
+
+.container{
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 90%;
+}
+
+.icons{
+  width:30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.icons_top{
+  width:50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+
+.header_ison{
+  display: flex;
+  gap: 20px;
+}
+
+.header{
+  margin-top: 20px;
+  background: linear-gradient(to right, #11992D, #67BA75);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlink{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navlink p {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+
+}
+
+.NavLink {
+  text-decoration: none;
+}
+
+.about{
+  margin-top: 20px;
+}
+
+.inputs{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #175783  ;
+  outline: none;
+  color: #175783;
+  padding: 17px 15px 2px 6px;
+  margin-bottom: 20px;
+  width: 100%;
+
+}
+
+.dev{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  margin:  0 auto;
+}
+.btn{
+  padding: 14px;
+  width: 100%;
+  border-radius: 10px;
+  color: #fff;
+  background: linear-gradient(to right, #11992D, #67BA75);
+  border: none;
+  font-weight: 600;
+}
+
+.inputs::placeholder {
+  color: #175783 ;
+} 
+
+
+.page {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.page.active {
+  opacity: 1;
+}
+ /* .burger {
+  display: none;
+} */
+
+ .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1111;
+}
+
+ .menu_not {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 0;
+  background: rgba(124, 122, 122, 0.20);
+  backdrop-filter: blur(10px);
+  animation: focus .4s ease;
+}
+
+@keyframes focus {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+} 
+ .menu_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: #67BA75  ;
+  padding: 30px 20px;
+  z-index: 999;
+  animation: menuModal .5s ease;
+}
+@keyframes menuModal {
+  0% {
+      right: -200px;
+  }
+
+  100% {
+      right: 0;
+  }
+}
+
+ .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.ico{
+  width: 25px;
+  height: 1.5px;
+  background-color: #175783;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+.headrr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.navlink_menu p{
+  margin-top: 40px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.icons_many{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
 }
